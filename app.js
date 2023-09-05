@@ -17,7 +17,7 @@ app.post('/api/v01/user/login', function (req, res) {
     if (email == "jesus@gmail.com" && password == "1234"){
         return res.status(200).json({"auth": true, "name": "Jesus", "token": token});
       }
-   
+    return res.status(401).jsonify({"auth": false})
   
   });
 
